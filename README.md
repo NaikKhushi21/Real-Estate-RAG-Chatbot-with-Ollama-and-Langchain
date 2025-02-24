@@ -12,4 +12,4 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline that lev
 
 ## Demo
 
-Watch the demo video to see the application in action: [Demo.mp4](Demo.mp4)
+Watch the demo video to see the application in action: [Watch the Demo video here](https://drive.google.com/file/d/1dh0z0bto3buLzsZ9cS0VWuF-4t73RSos/view?usp=sharing)
