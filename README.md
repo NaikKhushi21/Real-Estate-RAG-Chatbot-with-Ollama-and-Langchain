@@ -12,4 +12,4 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline that lev
 
 ## Demo
 
-Watch the demo video to see the application in action: [Demo.mp4](Demo.mp4)# RAG-chatbot-with-Llama-3.2
+Watch the demo video to see the application in action: [Demo.mp4](Demo.mp4)
