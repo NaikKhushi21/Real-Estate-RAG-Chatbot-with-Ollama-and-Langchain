@@ -20,7 +20,7 @@ def main():
     parser.add_argument("--reset", action="store_true", help="Reset the database.")
     args = parser.parse_args()
     if args.reset:
-        print("✨ Clearing Database")
+        print("Clearing Database")
         clear_database()
 
     # Create (or update) the data store.
@@ -74,9 +74,6 @@ def add_to_chroma(chunks: list[Document]):
 
 
 def calculate_chunk_ids(chunks):
-
-    # This will create IDs like "data/monopoly.pdf:6:2"
-    # Page Source : Page Number : Chunk Index
 
     last_page_id = None
     current_chunk_index = 0

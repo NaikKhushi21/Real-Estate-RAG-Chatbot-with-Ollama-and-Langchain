@@ -2,7 +2,7 @@ import os
 import streamlit as st
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain.vectorstores.chroma import Chroma
+from langchain_community.vectorstores import Chroma
 from get_embedding_function import get_embedding_function
 from query_data import query_rag
 
@@ -12,10 +12,14 @@ CHROMA_PATH = "chroma"
 
 os.makedirs(DATA_PATH, exist_ok=True)
 
-st.title("RAG Chatbot with PDF Upload")
+st.title("Enhanced Real Estate Chatbot")
 
-st.header("1. Upload PDFs")
-uploaded_files = st.file_uploader("Upload PDF files", type="pdf", accept_multiple_files=True)
+st.header("1. Upload Real Estate Documents")
+uploaded_files = st.file_uploader(
+    "Upload property data, regulatory documents, and financial reports (PDFs)", 
+    type="pdf", 
+    accept_multiple_files=True
+)
 
 if uploaded_files:
     for uploaded_file in uploaded_files:
@@ -39,7 +43,6 @@ if st.button("Process and Index PDFs"):
         is_separator_regex=False,
     )
     chunks = text_splitter.split_documents(documents)
-    # st.write(f"Split into {len(chunks)} chunks.")
 
     # Initialize the embedding function and vector store.
     embedding_function = get_embedding_function()
@@ -49,8 +52,8 @@ if st.button("Process and Index PDFs"):
     db.add_documents(chunks)
     st.success("Documents processed and indexed successfully!")
 
-st.header("3. Ask a Question")
-user_question = st.text_input("Enter your question:")
+st.header("3. Ask a Real Estate Question")
+user_question = st.text_input("Enter your real estate query:")
 
 if st.button("Get Answer") and user_question:
     with st.spinner("Generating answer..."):
