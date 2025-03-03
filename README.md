@@ -13,3 +13,4 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline that lev
 ## Demo
 
 Watch the demo video to see the application in action: [Watch the Demo video here](https://www.canva.com/design/DAGf-qy9YSA/q-x2-XgEf3rSWDMMAfTN3w/watch?utm_content=DAGf-qy9YSA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4e4c8686f6)
+# Real-Estate-RAG-Chatbot-with-Ollama-and-Langchain
